@@ -1,0 +1,119 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <math.h>
+
+
+
+int main(void) {
+	        setlocale(LC_ALL, "Portuguese");
+	        int menu, medida, i;
+	        float cota, afastamento, corte, aterro, medida1, aterrou, subir;
+	    	printf ( "Escolha uma opção:\n 1 - Afastamento de estaca \n 2 - Calcular medidas(corte e aterro) \n 3 - Calcular volume de terra \n 4 - Sair ou Encerrar \n");
+            scanf("%d", &menu);
+        do{
+	   		switch (menu)
+	      	{
+			  case 1:
+			  printf(" \n\nFazer afastamento de estaca no aterro \n \n Digite a cota da estaca: \n \n ");
+ 			          scanf("%f", &cota);
+ 			          fflush(stdin);
+ 			          	printf("\n Agora digite o quanto subiu de aterro \n \n ");
+ 			          	scanf("%f", &aterrou);
+ 			          		fflush(stdin);
+ 			          		 afastamento = aterrou * 1.5;
+ 			          		 subir = cota - aterrou;
+			                	printf(" \n Voce tem que afastar : %f",afastamento);
+			                	printf("  Metros   \n");
+			                	printf("\n\nAinda falta subir :%f", subir);
+				      
+	      		break;
+	      	case 2:
+			   printf("\nCalcular medidade de corte e de aterro \n Digite 1 para corte ou 2 para aterro \n\n");
+			        scanf("%d", &medida);
+			        	if  (medida == 1)
+			        	   	{
+								printf("Digite o corte \n");
+			        				scanf("%f", &corte);
+									fflush(stdin); 
+									   	printf("Digite qual foi a medida \n");   
+											scanf("%f", &medida1); 
+											fflush(stdin); 
+													cota = corte - medida1;
+												     printf("Você tem que corta : %f\n", cota);
+							}
+						else 
+							{
+								printf("Digite o aterro \n");
+									scanf("%f", &aterro);
+									fflush(stdin);
+										printf("Digite qual foi a medida \n");
+											scanf("%f", &medida1);
+											fflush(stdin);
+												cota = aterro - medida1;
+												 printf("Voce tem que aterra : %f", cota);
+									
+							}
+			        		    
+	      		break;
+	      	case 3:
+			  printf("Calcular volume de terra ");
+			  
+		int qtdEstaca = 0;
+		int qtdPontos = 0;
+
+	printf("Bem vindo ao calculo de material\n");
+	printf("Digite a quantidade de estacas que deseja armazena ?\n");
+	fflush(stdin);
+ 	scanf("%d", &qtdEstaca);
+ 	printf("Escolha 2 se for verificar na est esq e dir. 3 ou mais se for correr linha e pegar mais pontos\n");
+ 	fflush(stdin);
+ 	scanf("%d", &qtdPontos);	
+ 	float cotas[qtdEstaca][qtdPontos];
+ 	int l,c;
+ 	l = 0;
+ 	
+ 	
+ 	while(l < qtdEstaca){
+ 		printf("Estaca %d\n",(l+1));
+ 		c = 0;
+ 		while( c < qtdPontos){
+ 			printf("Digite a cota %d da estaca %d\n", (c+1),(l+1));
+			fflush(stdin); 
+ 			scanf("%f", &cotas[l][c]);
+ 			c = c + 1;
+		 }
+ 		l = l+ 1;	
+	 }
+	 float media,total,somatotal,soma;
+	 for (l = 0; l <qtdEstaca; l++){
+	 	media = 0.0;
+	 	total = 0.0;
+	 	somatotal = 0.0;
+	 	soma = 0,0;
+	 	for(c = 0; c < qtdPontos; c++){
+	 		total = total + cotas[l][c];
+			}
+		
+			media = total / qtdPontos;
+			    soma = media + soma;
+				
+			
+	 		
+	 		printf("\nA soma total da estaca e %f\n", soma);	 
+	 		
+		 }
+
+	      		break; 
+	      		
+	      		printf("\nFIM");
+	      		
+			  	printf("Você digitou um valor inválido, tente novamente");
+	      		
+		  }	
+	}while (menu != 4);
+		  
+	
+	
+	return 0;
+}
