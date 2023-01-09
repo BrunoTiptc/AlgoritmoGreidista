@@ -52,7 +52,7 @@ int main() {
 			
 			float soma1;	
 			
-			printf("\nA soma total da estaca %d é %f:\n",l+1, soma);
+			printf("\nA soma total da estaca %d Ã© %f:\n",l+1, soma);
 	 			
 	 			
 	 				result[i] += somatotal[l];
