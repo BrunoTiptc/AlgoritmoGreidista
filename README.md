@@ -1,4 +1,4 @@
- Esse algoritmo escrtio em linguagem C, via console visa 
+ Esse algoritmo escrito em linguagem C, via console visa 
 calcular medidas, de corte e aterro, afastamento de estacas.
 e calcular quantas viagens de caminhao são necessarias 
 para fazer aterramento entre estacas.
