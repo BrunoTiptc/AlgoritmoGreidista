@@ -1,19 +1,40 @@
- Esse algoritmo escrito em linguagem C, via console visa 
-calcular medidas, de corte e aterro, afastamento de estacas.
-e calcular quantas viagens de caminhao são necessarias 
-para fazer aterramento entre estacas.
- O tipo de trabalho é usado em terraplanagem na construção
- civil, e o topografo com as coordenadas faz as medidas, 
- que serao utilizadas. 
-  Quando o topografo vai embora, a obra fica para o greidista 
-  acompanhar os cortes e carregamento de terra das maquinas.
-   Ai que entra o recurso, que viza facilita os calculos,
-   com maior precisao e rapidez. Fazendo com que as maquinas
-   não percam tempo de trabalho.
+<h1 align="center">🛠️ Cálculo de Terraplanagem - Algoritmo em C</h1>
 
-   Switch Menu usado com 4 opções. 
-   1 - corte e aterro
-   2 - afastamento de estaca 
-   3 - calcular volume de terra 
-   4- Sair
-   
+<p align="center">
+  Algoritmo de console desenvolvido em linguagem C<br>
+  Focado em cálculos para corte, aterro e logística de caminhões em obras de terraplanagem.
+</p>
+
+---
+
+### 📌 Objetivo
+
+Este programa visa **auxiliar topógrafos e greidistas** na etapa de execução de obras de terraplanagem, otimizando os cálculos de:
+
+- Corte e aterro entre estacas
+- Afastamento de estacas
+- Volume de terra a ser movido
+- Estimativa de viagens de caminhão necessárias
+
+> Com esse recurso, os profissionais podem tomar decisões mais rápidas e precisas no canteiro de obras, sem depender de cálculos manuais demorados.
+
+---
+
+### 🧠 Contexto Técnico
+
+Na construção civil, especialmente em **obras de infraestrutura e loteamentos**, o topógrafo fornece as coordenadas e dados altimétricos. Após essa etapa, o greidista acompanha o trabalho das máquinas (escavadeiras, tratores, caminhões).  
+Esse algoritmo entra em ação **depois que o topógrafo entrega os dados**, ajudando o greidista a:
+
+✅ Realizar medições de forma prática  
+✅ Reduzir erros em campo  
+✅ Economizar tempo das máquinas e operadores
+
+---
+
+### 🧰 Funcionalidades (Menu com `switch`)
+
+```bash
+[1] Calcular Corte e Aterro
+[2] Calcular Afastamento de Estacas
+[3] Calcular Volume de Terra e Viagens de Caminhão
+[4] Sair
